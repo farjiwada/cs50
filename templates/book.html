@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+ 
+
+{% block title%}
+   Book review
+{% endblock %}
+
+{%  block body %}
+<div id="header">
+<h2>Project1:Books</h2>
+</div>
+<div id="navbar">
+    <ul>
+        <li><a href="{{ url_for('register') }}">Login</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+<div> 
+    {% for book in books %}
+    <img src="http://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg" width="130px">
+    <div class="content1">
+    <div>ISBN: {{ book.isbn }}</div>
+    <div>Bookname: {{ book.bookname }}</div>
+    <div>Author: {{ book.author }}</div>
+    <div>year: {{ book.publication_year }}</div>
+   </div>
+    {% endfor %}
+</div>
+{% for book in books %}
+ <table class="table">
+ <tr>
+  <div class="form1">
+   <form action="{{ url_for('review', bookname=book.bookname) }}" method = post>
+    <td><div class="form-group">
+        <input class="form_control" name="rating" placeholder="rating">
+     </div></td>
+     <td><div class="form-group">
+        <input class="form_control" name="review" placeholder="review">
+     </div></td>
+     <td><div class="form-group">
+        <button class="btn btn-primary">Add review!</button>
+    </div> </td>
+</form>
+</div>
+</tr>
+</table>
+{% endfor %}
+<div class="review">
+    <h3>Reviews:</h3>
+    {% if reviews %}
+    <table class="table">
+        <tr>
+            <th>Rating</th>
+            <th>User</th>
+            <th>Comment</th>
+        </tr>
+    {% for review in reviews %}
+    <tr>
+    <td>{{ review.rating }}</td>
+    <td><div>{{ review.username }}----</div></td>
+    <td><div>{{ review.review }}</div></td>
+    </tr>
+    {% endfor %}
+</table>
+    {% endif %}
+</div>
+{% endblock %}

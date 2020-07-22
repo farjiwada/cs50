@@ -1,0 +1,123 @@
+/*****HEADER SECTION*******/
+body {
+    background-color: lightgray;
+    margin: 0px;
+    font-family: verdana, georgia, serif;
+}
+#header {
+    margin: 10px;
+    background-color: black;
+    color: gainsboro;
+    height: 100px;
+    border-radius: 10px;
+}
+/*****NAVIGATION SECTION****/
+#navbar {
+    margin: 10px;
+    height: 40px;
+    background-color: black;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+#navbar ul {
+    margin: 2px;
+    list-style-type: none;
+    padding: 3px;
+    float: right;
+    clear: right;
+}
+#navbar li{
+    display: inline;
+    border-radius: 5px;
+}
+#navbar ul li a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: black;
+}
+#navbar .bar{
+    margin: 4.16px;
+    float: left;
+    background-color: white;
+    clear: left;
+    width: 35px;
+    height: 5px;
+}
+/*****HEADING SECTION******/
+ h2 {
+     font-size: 35px;
+     margin: 1px;
+     padding: 1px;
+     font-family: "Centure Gothic";
+     text-align: center;
+     padding: 2px;
+     top: 36px;
+     position: relative;
+ }
+ .h_4 {
+     text-align: center;
+     margin-top: 50px;
+ }
+ h4 {
+     padding: 10px;
+     background-color: floralwhite;
+     margin-left: 25%;
+     margin-right: 25%;
+ }
+ /*****MAIN SECTION******/
+ .content { 
+     width: 50%;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     border-style: solid;
+     margin-top: 100px;
+     margin-left: 25%;
+     padding: 10px;
+     background-color: cornsilk;
+     text-align: center;
+     display: flex;
+     flex-direction: column; 
+ }
+ /*****SEARCH BAR******/
+ .sear_bar { 
+    background-color: cornsilk;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    box-shadow: 2px 2px 10px black;
+    padding: 10px;
+ }
+ /*****BOOK_DATA******/
+ img {
+     float: left;
+     margin-left: 10px;
+     clear: left;
+     margin-bottom: 20px;
+ }
+ .content1 {
+     padding-left: 10px;
+     background-color: beige;
+     margin-left: 200px;
+     margin-right: 600px;
+     border-radius: 5px;
+ }
+
+ /*****FORM******/
+ .form1 {
+     clear: both;
+ }
+ /*****MESSAGE******/
+ .flash {
+     text-align: center;
+     margin-top: 20px;
+     background-color: lavender;
+     margin-left: 35%;
+     margin-right: 35%;
+     padding: 10px;
+     border-width: 4px;
+     border-style: solid;
+     border-color: azure;
+ }
