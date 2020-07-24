@@ -111,7 +111,7 @@ def review(bookname):
       else:
            db.execute("INSERT INTO reviews (book_id, review, rating, user_id) VALUES (:book_id, :review, :rating, :user_id)",{"book_id": books['id'], "review": review, "rating": rating, "user_id": session["user_id"]})
            db.commit()
-           return redirect(url_for('book',book=books['isbn']))
+           return redirect(url_for('book',isbn=books['isbn']))
 
     return render_template("register.html")
 
